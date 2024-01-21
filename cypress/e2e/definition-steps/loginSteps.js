@@ -17,6 +17,10 @@ Then("should to show the inventory page", () => {
 Then("should to show the message blocked {string}", (message) => {
     loginPage.elements.blockedMessage().should('have.text',message);
 });
+
+When("should to show the message incorrect user {string}", (message) => {
+    loginPage.elements.blockedMessage().should('have.text', message);
+});
      
 // Given("the user is on the login page", () => {
 //     cy.visit("/");
