@@ -1,0 +1,25 @@
+{
+  "name": "cypress-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "author": "Fiorella Mosqueira",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.3"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "esbuild": "^0.19.11"
+  },
+  "cypress-cucumber-preprocessor":{
+    "stepDefinitions":[
+      "cypress/e2e/definition-steps/*.{js,ts}"
+    ]
+  }
+
+}
