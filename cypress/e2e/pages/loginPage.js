@@ -8,8 +8,8 @@ class loginPage{
     }
     loginCredentials(user, password){
         this.elements.username().type(user);
-        this.elements.password().type(password)
-        this.elements.clickLogin().click();
+        this.elements.password().type(password);
+        this.elements.clickLogin().click()
     }
 
     // writeUser(user){

@@ -13,6 +13,10 @@ When("the user enters the usernmae {string}, the user enters the password {strin
 Then("should to show the inventory page", () => {
     cy.url().should('contains', '/inventory.html');
 });
+
+Then("should to show the message blocked {string}", (message) => {
+    loginPage.elements.blockedMessage().should('have.text',message);
+});
      
 // Given("the user is on the login page", () => {
 //     cy.visit("/");
