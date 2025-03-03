@@ -9,7 +9,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false,   
   e2e: {
     specPattern: "cypress/e2e/features/*.feature",
-    baseUrl: "https://www.saucedemo.com/",
+    baseUrl: "https://dpyafdt5ufpo0.cloudfront.net/inicio",
     async setupNodeEvents(on, config) {
       // implement node event listeners here
       const bundler = createBundler({
