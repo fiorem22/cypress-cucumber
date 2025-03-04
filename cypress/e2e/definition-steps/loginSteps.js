@@ -9,7 +9,7 @@ When("the user enters the username {string}, the user enters the password {strin
     loginPage.loginCredentials(username, password)
 });
 
-When("clicks the login button", () => {
+When("the user clicks the login button", () => {
     // cy.wrap(loginPage.btnclickLogin(button))
     // .catch((error)=> {
     //     console.error('login', error);
@@ -45,6 +45,13 @@ When("the user enters incorrect credentials", (dataTable) => {
         loginPage.typeUsername(row.username)
         loginPage.typePassword(row.password)
     });
+});
+
+When("the user enters incorrect credentials {string} y {string}", (username,password) => {
+    // dataTable.hashes().forEach(row => {
+        loginPage.typeUsername(username)
+        loginPage.typePassword(password)
+    // });
 });
 
 Then("should to show the failure message {string}", (message) => {

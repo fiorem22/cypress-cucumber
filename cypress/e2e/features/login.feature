@@ -2,10 +2,10 @@ Feature: Login to the application
     Background:
     Given the user is on the login page
 
-# @skip
+@skip
 Scenario: Succesful Login
     When the user enters the username "U24220181@", the user enters the password "1234"
-    When clicks the login button
+    When the user clicks the login button
     Then should to show the url "https://dpyafdt5ufpo0.cloudfront.net/inicio/#iss=https%3A%2F%2Fsso-qa.utp.edu.pe%2Fauth%2Frealms%2FXpedition-qa"
 
 # @skip
@@ -29,12 +29,13 @@ Scenario: Succesful Login
 
 # @skip
 Scenario: Incorrect Username Login
-    When the user enters incorrect credentials
-    |username|password|
-    |n|j|
-    |'|/|
-    When clicks the login button
+    When the user enters incorrect credentials '<username>' y '<password>'
+    When the user clicks the login button
     Then should to show the failure message "Correo y/o contraseña incorrectos"
+    Examples:
+    |username|password|
+    |username1|password1|
+    |username2|password2|
 
 
 
