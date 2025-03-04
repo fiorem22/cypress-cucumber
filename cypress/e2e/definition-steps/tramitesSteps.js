@@ -44,7 +44,7 @@ Given("the user be on page Tramites", (username, password) => {
     // }
 });
 
-When("clicks the Solicitudes SAE button", () => {
+When("the user clicks the Solicitudes SAE button", () => {
     tramitesPage.clickOptionSolicitudesSae()
     // try{
     //     loginPage.btnclickLogin()
@@ -53,7 +53,7 @@ When("clicks the Solicitudes SAE button", () => {
     // }
 });
 
-When("clicks dropdown Tipo", () => {
+When("the user clicks dropdown Tipo", () => {
     tramitesPage.clickDropDownTipo()
     // try{
     //     tramitesPage.clickDropDownTipo()
@@ -69,7 +69,7 @@ When("clicks dropdown Tipo", () => {
     // }
 });
 
-When("clicks the tramites button", () => {
+When("the user clicks the tramites button", () => {
     tramitesPage.clickTramites()
     // try{
     //     loginPage.clickTramites()
@@ -78,7 +78,7 @@ When("clicks the tramites button", () => {
     // }
 });
 
-When("type on Información de contacto {string}", (number) => {
+When("the user type on Información de contacto {string}", (number) => {
     tramitesPage.typeInputNumberInfo(number)
     // try{
     //     loginPage.clickTramites()
@@ -87,7 +87,33 @@ When("type on Información de contacto {string}", (number) => {
     // }
 });
 
-When("type on Detalle de solicitud {string}", (message) => {
+When("Informacion de contacto", (dataTable) => {
+    dataTable.hashes().forEach(row => {
+        tramitesPage.typeInputNumberInfo(row.informacion)
+        tramitesPage.typeInputTextDetalle(row.detalle)
+    });
+    // tramitesPage.typeInputNumberInfo(number)
+    // try{
+    //     loginPage.clickTramites()
+    // }catch(error){
+    //     cy.log('Tramites'+error)
+    // }
+});
+
+When("types {string} y {string}", (data) => {
+    data.hashes().forEach(row => {
+        tramitesPage.typeInputNumberInfo(row.informacion)
+        tramitesPage.typeInputTextDetalle(row.detalle)
+    });
+    // tramitesPage.typeInputNumberInfo(number)
+    // try{
+    //     loginPage.clickTramites()
+    // }catch(error){
+    //     cy.log('Tramites'+error)
+    // }
+});
+
+When("the user type on Detalle de solicitud {string}", (message) => {
     tramitesPage.typeInputTextDetalle(message)
     // try{
     //     loginPage.clickTramites()
@@ -96,7 +122,7 @@ When("type on Detalle de solicitud {string}", (message) => {
     // }
 });
 
-When("clicks the Solicitar button", () => {
+When("the user clicks the Solicitar button", () => {
     tramitesPage.clickBtnSolicitar()
     // try{
     //     loginPage.clickTramites()
@@ -105,7 +131,7 @@ When("clicks the Solicitar button", () => {
     // }
 });
 
-When("clicks the Entiendo button", () => {
+When("the user clicks the Entiendo button", () => {
     tramitesPage.clickBtnEntendido()
     // try{
     //     loginPage.clickTramites()
@@ -140,6 +166,19 @@ Then("should to show the message {string} tramites", (message) => {
     //     cy.log('Tramites'+error)
     // }
 });
+
+Then("should to show {string}, {string} y {string}", (message, i, l ) => {
+    tramitesPage.elements.tittleOptionAutogestionable().should('have.text',message);
+    tramitesPage.elements.tittleOptionSolicitudSae().should('have.text',i);
+    tramitesPage.elements.tittleOptionBecas().should('have.text',l);
+    // try{
+    //     loginPage.clickTramites()
+    // }catch(error){
+    //     cy.log('Tramites'+error)
+    // }
+});
+
+
 
 // When("clicks check", () => {
     // tramitesPage.clickCheckBox()

@@ -39,7 +39,7 @@ class tramitesPage{
     }
 
     clickOptionAmpliacion(){
-        this.elements.optionAmpliacion().should('exist').should('be.visible').focus().wait(5000).click({ force: true });
+        this.elements.optionAmpliacion().should('exist').should('be.visible').focus().wait(1000).click({ force: true });
     }
 
     typeInputNumberInfo(number){
