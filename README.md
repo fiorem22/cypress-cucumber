@@ -7,6 +7,8 @@ Este proyecto implementa un POC de automatización de pruebas utilizando Cypress
 
 - Lenguaje: JavaScript
 - Automatización Web: Cypress
+- Gestor de dependencias: npm
+- BDD: Cucumber
 
 ## Instalación
 
@@ -19,5 +21,10 @@ Este proyecto implementa un POC de automatización de pruebas utilizando Cypress
 
 ### Ejecución de Pruebas
 
-Ejecutar la interfaz gráfica de Cypress
-´npm cypress open´
+Ejecutar la interfaz gráfica de Cypress:
+- `npm cypress open`
+
+Ejecutar pruebas en modo headless
+- `npm cypress run`
+
+## Estructura del Proyecto
