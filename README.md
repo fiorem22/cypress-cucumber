@@ -20,7 +20,7 @@ Este proyecto implementa un POC de automatización de pruebas utilizando Cypress
  - `npm install -D @badeball/cypress-cucumber-preprocessor`
  - `npm install -D @bahmutov/cypress-esbuild-preprocessor esbuild`
 
-### Ejecución de Pruebas
+## Ejecución de Pruebas
 
 Ejecutar la interfaz gráfica de Cypress:
 - `npm cypress open`
