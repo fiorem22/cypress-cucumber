@@ -29,7 +29,7 @@ Ejecutar pruebas en modo headless
 
 ## Estructura del Proyecto
 
-```├── cypress/```
+```├── cypress/
 │   ├── e2e/
 │   │   ├── features/
 │   │   │   ├── ejemplo.feature
@@ -42,4 +42,4 @@ Ejecutar pruebas en modo headless
 │   │   ├── e2e.js
 ├── cypress.config.js
 ├── package.json
-├── README.md`
+├── README.md```
