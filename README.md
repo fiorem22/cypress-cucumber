@@ -27,20 +27,3 @@ Ejecutar la interfaz gráfica de Cypress:
 
 Ejecutar pruebas en modo headless
 - `npm cypress run`
-
-## Estructura del Proyecto
-
-```├── cypress/
-│   ├── e2e/
-│   │   ├── features/
-│   │   │   ├── ejemplo.feature
-│   │   ├── step_definitions/
-│   │   │   ├── ejemploSteps.js
-|   |   ├── pages/
-│   │   │   ├── ejemploPage.js
-│   ├── support/
-│   │   ├── commands.js
-│   │   ├── e2e.js
-├── cypress.config.js
-├── package.json
-├── README.md```
