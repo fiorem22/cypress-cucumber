@@ -1,7 +1,7 @@
 # Portal UTP
 
 ## Descripción
-Este proyecto implementa un POC de automatización de pruebas utilizando Cypress con Cucumber en un proyecto basado en JavaScript.
+Este proyecto implementa un POC de automatización de pruebas utilizando Cypress con Cucumber en un proyecto basado en JavaScript. La finalidad de este PoC es demostrar cómo escribir y ejecutar pruebas automatizadas utilizando una sintaxis más amigable para el negocio mediante BDD (Behavior-Driven Development).
 
 ## Tecnologías
 
@@ -13,7 +13,8 @@ Este proyecto implementa un POC de automatización de pruebas utilizando Cypress
 ## Instalación
 
 1. Clonar repositorio.
-2. Instalar las dependencias:
+2. Situarse en la rama "proyecto"
+3. Instalar las dependencias:
  - `npm init`
  - `npm install cypress --save -dev`
  - `npm install -D @badeball/cypress-cucumber-preprocessor`
